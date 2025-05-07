@@ -2,6 +2,7 @@
 <h1>
 <b>
 RAGNet: Large-scale Reasoning-based Affordance Segmentation Benchmark towards General Grasping
+</b>
 </h1>
 </div>
 
