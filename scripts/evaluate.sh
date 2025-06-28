@@ -23,7 +23,7 @@ deepspeed --master_port=24990 train_aff.py \
 #  --exp_name="AffordanceVLM-7B" \
 #  --eval_only \
 #  --eval_affordance \
-#  --val_dataset="handal"
+#  --val_dataset="handal_mini"
 #
 #deepspeed --master_port=24992 train_aff.py \
 #  --version=$affordance_model \
@@ -67,7 +67,7 @@ deepspeed --master_port=24990 train_aff.py \
 #  --exp_name="AffordanceVLM-7B" \
 #  --eval_only \
 #  --eval_reason_aff \
-#  --val_dataset="handal_no_objects"
+#  --val_dataset="handal_hard_reasoning"
 #
 #deepspeed --master_port=24996 train_aff.py \
 #  --version=$affordance_model \
@@ -78,7 +78,7 @@ deepspeed --master_port=24990 train_aff.py \
 #  --exp_name="AffordanceVLM-7B" \
 #  --eval_only \
 #  --eval_reason_aff \
-#  --val_dataset="handal_with_objects"
+#  --val_dataset="handal_easy_reasoning"
 #
 #deepspeed --master_port=24997 train_aff.py \
 #  --version=$affordance_model \
@@ -89,4 +89,4 @@ deepspeed --master_port=24990 train_aff.py \
 #  --exp_name="AffordanceVLM-7B" \
 #  --eval_only \
 #  --eval_reason_aff \
-#  --val_dataset="3doi_with_objects"
+#  --val_dataset="3doi_easy_reasoning"
