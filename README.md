@@ -29,11 +29,11 @@ RAGNet: Large-scale Reasoning-based Affordance Segmentation Benchmark towards Ge
 
 ## Main Results
 
-OpenLane-V2 subset-A val set:
+HANDAL:
 
-| Method      | gIoU | cIoU |
-|:-----------:|:----:|-----:|
-|   TopoMLP   | 60.3 | 60.8 |      
+|      Method      | gIoU | cIoU |
+|:----------------:|:----:|-----:|
+| AffordanceVLM-7B | 60.3 | 60.8 |      
 
 ## Acknowledgements
 We thank the authors that open the following projects. 
