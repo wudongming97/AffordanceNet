@@ -21,57 +21,19 @@ RAGNet: Large-scale Reasoning-based Affordance Segmentation Benchmark towards Ge
 - [2025.07] Inference code and the [AffordanceVLM](https://huggingface.co/Dongming97/AffordanceVLM) model are released. Welcome to try it!
 - [2025.07] The paper is released at [arXiv]().
 
-## Installation
-```
-https://github.com/wudongming97/AffordanceNet.git
-cd AffordanceNet
-conda create -n affordancenet python=3.9
-conda activate affordancenet
-pip install -r requirements.txt
-pip install flash-attn --no-build-isolation
-```
+## Getting Started
 
-## Dataset
-We employ HANDAL, Open-X, GraspNet, EgoObjects, and RLBench data in our affordance segmentation task. 
-The HANDAL data is downloaded and organized according to its official [repo](https://github.com/NVlabs/HANDAL).
-Other data can be downloaded from the [Hugging Face](https://github.com/NVlabs/HANDAL).
-The dataset is organized as follows:
-```
-./data/
-├── HANDAL
-│   ├── without_depth
-│       ├── handal_dataset_adjustable_wrenches
-│       ├── handal_dataset_combinational_wrenches
-│       ├── handal_dataset_fixed_joint_pliers
-│       ├── ...
-├── Open-X
-│   ├── images
-│       ├── fractal20220817_data
-│       ├── bridge
-│   ├── masks
-│       ├── ...
-├── GraspNet
-│   ├── images
-│   ├── masks
-├── EgoObjects
-│   ├── images
-│   ├── masks
-├── RLBench
-│   ├── images
-│   ├── masks
-```
-## Evaluation
-To evaluate AffordanceVLM on the entire [HANDAL](https://github.com/NVlabs/HANDAL) dataset, please adjust the `--dataset_dir` parameter in `evaluate.sh`.
-```
-bash ./scripts/evaluate.sh
-```
+* [Installation](docs/installation.md)
+* [Download dataset](docs/dataset.md)
+* [Training and Evaluation](docs/training_and_evaluation.md)
 
-To chat with [AffordanceVLM-7B](https://huggingface.co/Dongming97/AffordanceVLM):
-```
-CUDA_VISIBLE_DEVICES=0 python chat.py --version=./exps/AffordanceVLM-7B
-```
+## Main Results
 
+OpenLane-V2 subset-A val set:
 
+| Method      | gIoU | cIoU |
+|:-----------:|:----:|-----:|
+|   TopoMLP   | 60.3 | 60.8 |      
 
 ## Acknowledgements
 We thank the authors that open the following projects. 
