@@ -49,8 +49,8 @@ class ReasonAffDataset(torch.utils.data.Dataset):
         image_size: int = 224,
         num_classes_per_sample: int = 3,
         exclude_val=False,
-        reason_aff_data="handal_no_objects||egoobjects_with_objects||egoobjects_no_objects",
-        reason_aff_sample_ratio=[1, 1, 1],
+        reason_aff_data="handal_hard_reasoning",
+        reason_aff_sample_ratio=[1],
         explanatory=0.1,
     ):
         self.exclude_val = exclude_val
@@ -77,8 +77,8 @@ class ReasonAffDataset(torch.utils.data.Dataset):
         self.data2list = {}
         self.object_ids = {}
         for ds in reason_aff_datas:
-            if ds == "handal_no_objects" or ds == "egoobjects_with_objects" or ds == "egoobjects_no_objects":
-                pkl_path = f'/data/robot-merlin/my_data/reason_{ds}.pkl'
+            if ds == "handal_hard_reasoning" or ds == "egoobjects_easy_reasoning" or ds == "egoobjects_hard_reasoning":
+                pkl_path = os.path.join(base_image_dir, f'{ds}_val.pkl')
                 images = {}
                 labels = {}
                 questions = {}
@@ -228,7 +228,7 @@ class ReasonAffValDataset(torch.utils.data.Dataset):
         self.answers = []
         self.class_ids = []
         self.class_names = []
-        pkl_path = f'/data/robot-merlin/my_data/val_reason_{ds}.pkl'
+        pkl_path = os.path.join(self.base_image_dir, f'{ds}_val.pkl')
         with open(pkl_path, 'rb') as f:
             reason_datas = pickle.load(f)
         for reason_data in reason_datas:

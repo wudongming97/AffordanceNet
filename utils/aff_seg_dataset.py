@@ -109,11 +109,8 @@ class AffordanceSegDataset(torch.utils.data.Dataset):
                 self.data2list[ds] = (images, labels)
                 print("categories of handal: ", aff_cls_list)
                 print("number of handal samples: ", num_handal)
-            elif ds == "openx" or ds == "egoobjects" or ds == "rlbench" or ds == "rlbenchv4":
-                if ds == "rlbenchv4":
-                    pkl_path = f'/data/robot-merlin/my_data/rlbench_data_v4.pkl'
-                else:
-                    pkl_path = f'/data/robot-merlin/my_data/{ds}_data.pkl'
+            elif ds == "openx" or ds == "egoobjects" or ds == "rlbench":
+                pkl_path = os.path.join(base_image_dir, f"{ds}_train.pkl")
                 images = {}
                 labels = {}
                 with open(pkl_path, 'rb') as f:
@@ -131,7 +128,7 @@ class AffordanceSegDataset(torch.utils.data.Dataset):
                 print(f"categories of {ds}: ", images.keys())
                 print(f"number of {ds} samples: ", len(aff_datas))
             elif ds == 'graspnet':
-                pkl_path = '/data/robot-merlin/my_data/graspnet_data.pkl'
+                pkl_path = os.path.join(base_image_dir, f"{ds}_train.pkl")
                 images = {}
                 labels = {}
                 object_ids = {}
@@ -293,7 +290,7 @@ class AffValDataset(torch.utils.data.Dataset):
         self.class_ids = []
         self.images = []
         self.labels = []
-        pkl_path = f'/data/robot-merlin/my_data/val_{ds}.pkl'
+        pkl_path = os.path.join(base_image_dir, f"{ds}_val.pkl")
         if ds == 'handal_all':
             aff_cls_list = os.listdir(os.path.join(self.base_image_dir, "HANDAL", "without_depth"))
             aff_cls_list = [aff_cls[15:] for aff_cls in aff_cls_list if '.zip' not in aff_cls]

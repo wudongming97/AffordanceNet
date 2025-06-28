@@ -184,10 +184,10 @@ class HybridDataset(torch.utils.data.Dataset):
         refer_seg_data="refclef||refcoco||refcoco+||refcocog",
         vqa_data="llava_instruct_150k",
         reason_seg_data="ReasonSeg|train",
-        aff_seg_data="handal||openx||egoobjects",
-        aff_sample_rate=[1, 1, 1],
-        reason_aff_data="handal_no_objects||egoobjects_with_objects||egoobjects_no_objects",
-        reason_aff_sample_rate=[1, 1, 1],
+        aff_seg_data="handal",
+        aff_sample_rate=[1],
+        reason_aff_data="handal_hard_reasoning",
+        reason_aff_sample_rate=[1],
         explanatory=0.1,
     ):
         self.exclude_val = exclude_val
