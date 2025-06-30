@@ -1,7 +1,7 @@
 <div align="center">
 <h1>
 <b>
-RAGNet: Large-scale Reasoning-based Affordance Segmentation Benchmark towards General Grasping
+A Large-Scale Reasoning-based Affordance Segmentation Dataset and Model for Universal Robot Grasping
 </b>
 </h1>
 </div>
