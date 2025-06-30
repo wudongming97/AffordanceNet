@@ -67,3 +67,12 @@ You can use the following script to confirm if data is organized correctly:
 ```bash
 python data_curation/check_dataset.py
 ```
+
+### About data curation
+1. **SAM2**: We use SAM2 to generate affordance mask if the dataset provides box annotation.
+2. **Florence-2 + SAM2**: We use Florence-2 to generate the initial segmentation masks of some complete objects, and then refine them with SAM2. Please see [Florence-2+SAM2](https://github.com/IDEA-Research/Grounded-SAM-2).
+3. **VLPart + SAM2**: We use VLPart to generate box of object part, and then refine them with SAM2. We refer to [VLPart](https://github.com/facebookresearch/VLPart). 
+We provide our inference demo scripts in `data_curation/build_vlpart.py` and `data_curation/vlpart_sam2_tracking.py`.
+4. **Reasoning Instruction**: We provide two example scripts to generate reasoning instructions for the affordance segmentation task:
+   - `data_curation/prompt_generation_handal_easy_reasoning.py`: This script generates easy reasoning instructions for the HANDAL dataset.
+   - `data_curation/prompt_generation_handal_hard_reasoning.py`: This script generates hard reasoning instructions for the HANDAL dataset.
