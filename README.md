@@ -6,7 +6,7 @@ RAGNet: Large-scale Reasoning-based Affordance Segmentation Benchmark towards Ge
 </h1>
 </div>
 
-<p align="center"><img src="./imgs/AffordanceNet.png" width="800"/></p>
+<p align="center"><img src="./imgs/AffordanceNet.jpg" width="800"/></p>
 
 
 > **[A Large-Scale Reasoning-based Affordance Segmentation Dataset and Model for Universal Robot Grasping]()**
@@ -25,15 +25,18 @@ RAGNet: Large-scale Reasoning-based Affordance Segmentation Benchmark towards Ge
 
 * [Installation](docs/installation.md)
 * [Download dataset](docs/dataset.md)
-* [Training and Evaluation](docs/training_and_evaluation.md)
+* [Training and evaluation](docs/training_and_evaluation.md)
 
-## Main Results
+## Citation
+If you find our work useful, please consider citing:
 
-HANDAL:
-
-|      Method      | gIoU | cIoU |
-|:----------------:|:----:|-----:|
-| AffordanceVLM-7B | 60.3 | 60.8 |      
+```bibtex
+@article{wu2025ragnet,
+  title={RAGNet: Large-scale Reasoning-based Affordance Segmentation Benchmark towards General Grasping},
+  author={Wu, Dongming and Fu, Yanping and Huang, Saike and Liu, Yingfei and Jia, Fan and Liu, Nian and Dai, Feng and Wang, Tiancai and Anwer, Rao Muhammad and Khan, Fahad Shahbaz and Shen, Jianbing},
+  year={2025}
+}
+```
 
 ## Acknowledgements
 We thank the authors that open the following projects. 
