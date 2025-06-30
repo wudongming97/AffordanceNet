@@ -18,7 +18,7 @@ from utils.utils import (DEFAULT_IM_END_TOKEN, DEFAULT_IM_START_TOKEN,
 
 def parse_args(args):
     parser = argparse.ArgumentParser(description="LISA chat")
-    parser.add_argument("--version", default="xinlai/LISA-13B-llama2-v1")
+    parser.add_argument("--version", default="./exps/AffordanceVLM-7B")
     parser.add_argument("--vis_save_path", default="./vis_output", type=str)
     parser.add_argument(
         "--precision",
@@ -76,8 +76,10 @@ def main(args):
         use_fast=False,
     )
     tokenizer.pad_token = tokenizer.unk_token
+    num_added_tokens = tokenizer.add_tokens("[SEG]")
     args.seg_token_idx = tokenizer("[SEG]", add_special_tokens=False).input_ids[0]
-
+    num_added_tokens = tokenizer.add_tokens("[AFF]")
+    args.aff_token_idx = tokenizer("[AFF]", add_special_tokens=False).input_ids[0]
 
     torch_dtype = torch.float32
     if args.precision == "bf16":
@@ -112,7 +114,7 @@ def main(args):
         )
 
     model = AffordanceVLMForCausalLM.from_pretrained(
-        args.version, low_cpu_mem_usage=True, vision_tower=args.vision_tower, seg_token_idx=args.seg_token_idx, **kwargs
+        args.version, low_cpu_mem_usage=True, vision_tower=args.vision_tower, seg_token_idx=args.seg_token_idx, aff_token_idx=args.aff_token_idx, **kwargs
     )
 
     model.config.eos_token_id = tokenizer.eos_token_id
