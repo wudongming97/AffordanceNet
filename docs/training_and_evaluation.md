@@ -46,3 +46,11 @@ To chat with [AffordanceVLM-7B](https://huggingface.co/Dongming97/AffordanceVLM)
 ```
 CUDA_VISIBLE_DEVICES=0 python chat.py --version=./exps/AffordanceVLM-7B
 ```
+
+### Main Results
+
+HANDAL:
+
+|      Method      | gIoU | cIoU |
+|:----------------:|:----:|-----:|
+| AffordanceVLM-7B | 60.3 | 60.8 |   
