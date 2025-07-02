@@ -78,7 +78,7 @@ class ReasonAffDataset(torch.utils.data.Dataset):
         self.object_ids = {}
         for ds in reason_aff_datas:
             if ds == "handal_hard_reasoning" or ds == "egoobjects_easy_reasoning" or ds == "egoobjects_hard_reasoning":
-                pkl_path = os.path.join(base_image_dir, f'{ds}_val.pkl')
+                pkl_path = os.path.join(base_image_dir, f'{ds}_train.pkl')
                 images = {}
                 labels = {}
                 questions = {}
