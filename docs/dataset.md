@@ -4,6 +4,21 @@ To train our affordance segmentation model, we use two types of data:
 * **General Segmentation Data**: This follows [LISA](https://github.com/dvlab-research/LISA).
 * **Affordance Segmentation Data**: This is a large-scale dataset that we collect.
 
+### General Segmentation Data
+These data is organized as follows:
+```
+./data/
+├── lisa_data
+│   ├── ade20k
+│   ├── coco
+│   ├── cocostuff
+│   ├── llava_dataset
+│   ├── mapillary
+│   ├── reason_seg
+│   ├── refer_seg
+│   ├── vlpart
+```
+
 ### Affordance Segmentation Data
 
 We employ images from HANDAL, Open-X, GraspNet, EgoObjects, and RLBench in our affordance segmentation task. 

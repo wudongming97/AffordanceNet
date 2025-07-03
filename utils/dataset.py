@@ -210,7 +210,7 @@ class HybridDataset(torch.utils.data.Dataset):
             if dataset == "sem_seg":
                 self.all_datasets.append(
                     SemSegDataset(
-                        base_image_dir,
+                        base_image_dir.replace('./data', './data/lisa_data'),
                         tokenizer,
                         vision_tower,
                         samples_per_epoch,
@@ -224,7 +224,7 @@ class HybridDataset(torch.utils.data.Dataset):
             elif dataset == "refer_seg":
                 self.all_datasets.append(
                     ReferSegDataset(
-                        base_image_dir,
+                        base_image_dir.replace('./data', './data/lisa_data'),
                         tokenizer,
                         vision_tower,
                         samples_per_epoch,
@@ -238,7 +238,7 @@ class HybridDataset(torch.utils.data.Dataset):
             elif dataset == "vqa":
                 self.all_datasets.append(
                     VQADataset(
-                        base_image_dir,
+                        base_image_dir.replace('./data', './data/lisa_data'),
                         tokenizer,
                         vision_tower,
                         samples_per_epoch,
@@ -252,7 +252,7 @@ class HybridDataset(torch.utils.data.Dataset):
             elif dataset == "reason_seg":
                 self.all_datasets.append(
                     ReasonSegDataset(
-                        base_image_dir,
+                        base_image_dir.replace('./data', './data/lisa_data'),
                         tokenizer,
                         vision_tower,
                         samples_per_epoch,
@@ -267,7 +267,7 @@ class HybridDataset(torch.utils.data.Dataset):
             elif dataset == "aff_seg":
                 self.all_datasets.append(
                     AffordanceSegDataset(
-                        base_image_dir.replace("/lisa_data", ""),
+                        base_image_dir,
                         tokenizer,
                         vision_tower,
                         samples_per_epoch,
@@ -282,7 +282,7 @@ class HybridDataset(torch.utils.data.Dataset):
             elif dataset == "reason_aff":
                 self.all_datasets.append(
                     ReasonAffDataset(
-                        base_image_dir.replace("/lisa_data", ""),
+                        base_image_dir,
                         tokenizer,
                         vision_tower,
                         samples_per_epoch,
@@ -319,7 +319,7 @@ class ValDataset(torch.utils.data.Dataset):
         val_dataset,
         image_size=1024,
     ):
-        self.base_image_dir = base_image_dir
+        self.base_image_dir = base_image_dir.replace('./data', './data/lisa_data')
         splits = val_dataset.split("|")
         if len(splits) == 2:
             ds, split = splits
