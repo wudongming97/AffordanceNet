@@ -1,7 +1,7 @@
 <div align="center">
 <h1>
 <b>
-A Large-Scale Reasoning-based Affordance Segmentation Dataset and Model for Universal Robot Grasping
+RAGNet: Large-scale Reasoning-based Affordance Segmentation Benchmark towards General Grasping
 </b>
 </h1>
 </div>
@@ -9,7 +9,7 @@ A Large-Scale Reasoning-based Affordance Segmentation Dataset and Model for Univ
 <p align="center"><img src="./imgs/AffordanceNet.jpg" width="800"/></p>
 
 
-> **[A Large-Scale Reasoning-based Affordance Segmentation Dataset and Model for Universal Robot Grasping]()**
+> **[RAGNet: Large-scale Reasoning-based Affordance Segmentation Benchmark towards General Grasping]()**
 >
 > Dongming Wu, Yanping Fu, Saike Huang, Yingfei Liu, Fan Jia, Nian Liu, Feng Dai, Tiancai Wang, Rao Muhammad Anwer, Fahad Shahbaz Khan, Jianbing Shen
 
@@ -20,6 +20,7 @@ A Large-Scale Reasoning-based Affordance Segmentation Dataset and Model for Univ
 ## News
 - [2025.07] Inference code and the [AffordanceVLM](https://huggingface.co/Dongming97/AffordanceVLM) model are released. Welcome to try it!
 - [2025.07] The paper is released at [arXiv]().
+- [2025.06] The paper is accepted by ICCV 2025!
 
 ## Getting Started
 
