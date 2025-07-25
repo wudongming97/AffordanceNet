@@ -28,6 +28,20 @@ RAGNet: Large-scale Reasoning-based Affordance Segmentation Benchmark towards Ge
 * [Download dataset](docs/dataset.md)
 * [Training and evaluation](docs/training_and_evaluation.md)
 
+## Main Results
+### Quantitative Results on Affordance Segmentation
+
+| Method                               | HANDAL gIoU | HANDAL cIoU | HANDAL† gIoU | HANDAL† cIoU | GraspNet seen gIoU | GraspNet seen cIoU | GraspNet novel gIoU | GraspNet novel cIoU | 3DOI gIoU | 3DOI cIoU |
+|--------------------------------------|-------------|-------------|---------------|---------------|----------------------|----------------------|------------------------|------------------------|------------|------------|
+| AffordanceNet | 60.3| 60.8 |60.5|60.3|63.3 |64.0| 45.6 |33.2  | 37.4| 37.4 |
+
+### Quantitative Results on Reasoning-Based Affordance Segmentation
+
+| Method  | HANDAL (easy) gIoU | HANDAL (easy) cIoU | HANDAL (hard) gIoU | HANDAL (hard) cIoU | 3DOI gIoU | 3DOI cIoU |
+|---------|---------------------|---------------------|---------------------|---------------------|-----------|-----------|
+| AffordanceNet| 58.3| 58.1 | 58.2| 57.8 | 38.1 | 39.4|
+
+
 ## Citation
 If you find our work useful, please consider citing:
 
