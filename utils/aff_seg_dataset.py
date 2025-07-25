@@ -327,6 +327,16 @@ class AffValDataset(torch.utils.data.Dataset):
             with open(pkl_path, 'rb') as f:
                 val_datas = pickle.load(f)
             for class_name in val_datas['images'].keys():
+                # one image is broken, so skip it
+                image_list = val_datas['images'][class_name]
+                for idx, img_path in enumerate(image_list):
+                    if os.path.basename(img_path) == "EK_frame_0000040462.jpg":
+                        # remove the corresponding data
+                        del val_datas['images'][class_name][idx]
+                        del val_datas['labels'][class_name][idx]
+                        del val_datas['class_names'][class_name][idx]
+                        if 'class_ids' in val_datas:
+                            del val_datas['class_ids'][class_name][idx]
 
                 self.images.extend(val_datas['images'][class_name])
                 self.labels.extend(val_datas['labels'][class_name])

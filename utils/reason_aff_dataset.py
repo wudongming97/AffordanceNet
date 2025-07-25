@@ -232,6 +232,9 @@ class ReasonAffValDataset(torch.utils.data.Dataset):
         with open(pkl_path, 'rb') as f:
             reason_datas = pickle.load(f)
         for reason_data in reason_datas:
+            # one image is broken in 3doi_easy_reasoning_val.pkl, so skip it
+            if 'EK_frame_0000040462.jpg' in reason_data['frame_path']:
+                continue
             self.images.append(reason_data['frame_path'])
             self.labels.append(reason_data['mask_path'])
             self.questions.append(reason_data['question'])
