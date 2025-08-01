@@ -8,7 +8,7 @@ RAGNet: Large-scale Reasoning-based Affordance Segmentation Benchmark towards Ge
 
 <div align="center">
 
-| [**📑Paper**](https://arxiv.org/abs/2507.23734)  |  [**🤗Model**](https://huggingface.co/Dongming97/AffordanceVLM) |
+| [**📑Paper**](https://arxiv.org/abs/2507.23734)  |  [**🤗Model**](https://huggingface.co/Dongming97/AffordanceVLM) |   [**🤗Dataset**](https://huggingface.co/datasets/Dongming97/RAGNet) |
 
 </div>
 
