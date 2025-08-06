@@ -60,7 +60,8 @@ If you find our work useful, please consider citing:
 ```bibtex
 @article{wu2025ragnet,
   title={RAGNet: Large-scale Reasoning-based Affordance Segmentation Benchmark towards General Grasping},
-  author={Wu, Dongming and Fu, Yanping and Huang, Saike and Liu, Yingfei and Jia, Fan and Liu, Nian and Dai, Feng and Wang, Tiancai and Anwer, Rao Muhammad and Khan, Fahad Shahbaz and Shen, Jianbing},
+  author={Wu, Dongming and Fu, Yanping and Huang, Saike and Liu, Yingfei and Jia, Fan and Liu, Nian and Dai, Feng and Wang, Tiancai and Anwer, Rao Muhammad and Khan, Fahad Shahbaz and others},
+  journal={arXiv preprint arXiv:2507.23734},
   year={2025}
 }
 ```
