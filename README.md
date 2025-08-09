@@ -39,6 +39,12 @@ RAGNet: Large-scale Reasoning-based Affordance Segmentation Benchmark towards Ge
 * [Download dataset](docs/dataset.md)
 * [Training and evaluation](docs/training_and_evaluation.md)
 
+To deploy using Gradio, run the following command:
+
+```
+CUDA_VISIBLE_DEVICES=0 python app.py --version='xinlai/LISA-13B-llama2-v1 --load_in_4bit'
+```
+
 
 
 ## 📊 Main Results
